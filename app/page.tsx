@@ -106,7 +106,7 @@ export default function Home() {
                 <p className="text-sm font-semibold text-[#7c2d2d]">
                   {item.date}
                 </p>
-                <p className="mt-1 text-2xl font-bold tracking-tight">
+                <p className="time-font mt-1 text-2xl font-bold tracking-tight">
                   {item.time}
                 </p>
                 <h3 className="mt-4 text-lg font-semibold">{item.label}</h3>
@@ -135,7 +135,7 @@ export default function Home() {
                 key={`${time}-${item}`}
                 className="schedule-row grid gap-2 px-5 py-4 sm:grid-cols-[6rem_1fr] sm:px-7"
               >
-                <time className="text-lg font-bold tabular-nums text-[#7c2d2d]">
+                <time className="time-font text-lg font-bold text-[#7c2d2d]">
                   {time}
                 </time>
                 <div>
