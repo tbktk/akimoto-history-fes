@@ -161,9 +161,7 @@ export default function Home() {
               </div>
               <div>
                 <dt className="font-semibold">鍛冶町の一部</dt>
-                <dd className="text-stone-600">
-                  12:30〜13:50（行列通過まで）
-                </dd>
+                <dd className="text-stone-600">12:30〜13:50（行列通過まで）</dd>
               </div>
             </dl>
           </article>
