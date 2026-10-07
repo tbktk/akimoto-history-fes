@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
+import { Noto_Sans_JP, Roboto_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+
+const notoSansJp = Noto_Sans_JP({
+  subsets: ["latin"],
+  variable: "--font-noto-sans-jp",
+  display: "swap",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "総社秋元公歴史まつり 武者行列 参加者向け案内",
@@ -13,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={`${notoSansJp.variable} ${robotoMono.variable}`}>
       <body>
         <header className="border-b border-stone-300/80 bg-[#fffdf8]/90 backdrop-blur">
           <div className="page-shell flex min-h-16 items-center justify-between gap-4 py-3">
