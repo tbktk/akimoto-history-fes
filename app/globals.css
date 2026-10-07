@@ -24,14 +24,17 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  font-family:
-    "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui,
-    sans-serif;
+  font-family: var(--font-noto-sans-jp), sans-serif;
   background:
     radial-gradient(circle at top left, rgb(166 124 53 / 8%), transparent 32rem),
     var(--background);
 }
 
+
+.time-font {
+  font-family: var(--font-roboto-mono), monospace;
+  font-variant-numeric: tabular-nums;
+}
 
 ::selection {
   background: rgb(124 45 45 / 18%);
