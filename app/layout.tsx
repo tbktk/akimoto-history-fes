@@ -45,9 +45,7 @@ export default function RootLayout({
         <footer className="mt-16 border-t border-stone-300/80 bg-[#efe8dc]">
           <div className="page-shell py-8 text-sm leading-7 text-stone-600">
             <p>総社秋元公歴史まつり 武者行列 参加者向け案内</p>
-            <p className="mt-1">
-              掲載内容は配布資料に基づいて整理しています。
-            </p>
+            <p className="mt-1">掲載内容は配布資料に基づいて整理しています。</p>
           </div>
         </footer>
       </body>
