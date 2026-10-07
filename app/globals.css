@@ -32,9 +32,6 @@ body {
     var(--background);
 }
 
-a {
-  color: inherit;
-}
 
 ::selection {
   background: rgb(124 45 45 / 18%);
