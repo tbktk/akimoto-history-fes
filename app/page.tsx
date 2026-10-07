@@ -1,10 +1,30 @@
 import Link from "next/link";
 
 const overview = [
-  { date: "11月4日（水）", time: "19:00", label: "第1回 着付け講習会", place: "総社公民館" },
-  { date: "11月6日（金）", time: "19:00", label: "第2回 着付け講習会", place: "総社公民館" },
-  { date: "11月7日（土）", time: "18:00〜19:30", label: "リハーサル", place: "総社公民館 屋外ステージ" },
-  { date: "11月8日（日）", time: "12:00〜", label: "本番・出陣式", place: "総社公民館周辺" },
+  {
+    date: "11月4日（水）",
+    time: "19:00",
+    label: "第1回 着付け講習会",
+    place: "総社公民館",
+  },
+  {
+    date: "11月6日（金）",
+    time: "19:00",
+    label: "第2回 着付け講習会",
+    place: "総社公民館",
+  },
+  {
+    date: "11月7日（土）",
+    time: "18:00〜19:30",
+    label: "リハーサル",
+    place: "総社公民館 屋外ステージ",
+  },
+  {
+    date: "11月8日（日）",
+    time: "12:00〜",
+    label: "本番・出陣式",
+    place: "総社公民館周辺",
+  },
 ];
 
 const daySchedule = [
@@ -43,7 +63,9 @@ export default function Home() {
     <main>
       <section className="border-b border-stone-300/70 bg-[#231f1a] text-white">
         <div className="page-shell py-14 sm:py-20">
-          <p className="text-sm font-semibold tracking-[0.2em] text-[#d8b46b]">2026年11月8日（日）</p>
+          <p className="text-sm font-semibold tracking-[0.2em] text-[#d8b46b]">
+            2026年11月8日（日）
+          </p>
           <h1 className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-[0.04em] sm:text-5xl">
             総社秋元公歴史まつり
             <span className="mt-2 block text-xl font-medium text-stone-200 sm:text-2xl">
@@ -66,8 +88,13 @@ export default function Home() {
         <section aria-labelledby="overview-title">
           <div className="mb-5 flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold tracking-[0.14em] text-[#7c2d2d]">SCHEDULE</p>
-              <h2 id="overview-title" className="mt-2 text-2xl font-bold sm:text-3xl">
+              <p className="text-sm font-semibold tracking-[0.14em] text-[#7c2d2d]">
+                SCHEDULE
+              </p>
+              <h2
+                id="overview-title"
+                className="mt-2 text-2xl font-bold sm:text-3xl"
+              >
                 今後の日程
               </h2>
             </div>
@@ -76,8 +103,12 @@ export default function Home() {
           <div className="grid gap-4 md:grid-cols-2">
             {overview.map((item) => (
               <article key={item.date} className="section-card p-5 sm:p-6">
-                <p className="text-sm font-semibold text-[#7c2d2d]">{item.date}</p>
-                <p className="mt-1 text-2xl font-bold tracking-tight">{item.time}</p>
+                <p className="text-sm font-semibold text-[#7c2d2d]">
+                  {item.date}
+                </p>
+                <p className="mt-1 text-2xl font-bold tracking-tight">
+                  {item.time}
+                </p>
                 <h3 className="mt-4 text-lg font-semibold">{item.label}</h3>
                 <p className="mt-1 text-sm text-stone-600">{item.place}</p>
               </article>
@@ -85,24 +116,35 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-card overflow-hidden" aria-labelledby="day-title">
+        <section
+          className="section-card overflow-hidden"
+          aria-labelledby="day-title"
+        >
           <div className="border-b border-stone-300 bg-[#efe8dc] px-5 py-5 sm:px-7">
-            <p className="text-sm font-semibold tracking-[0.14em] text-[#7c2d2d]">NOVEMBER 8</p>
+            <p className="text-sm font-semibold tracking-[0.14em] text-[#7c2d2d]">
+              NOVEMBER 8
+            </p>
             <h2 id="day-title" className="mt-1 text-2xl font-bold">
               本番当日のタイムスケジュール
             </h2>
           </div>
 
           <div>
-            {daySchedule.map(([time, item, note], index) => (
+            {daySchedule.map(([time, item, note]) => (
               <div
-                key={`${time}-${item}-${index}`}
+                key={`${time}-${item}`}
                 className="schedule-row grid gap-2 px-5 py-4 sm:grid-cols-[6rem_1fr] sm:px-7"
               >
-                <time className="text-lg font-bold tabular-nums text-[#7c2d2d]">{time}</time>
+                <time className="text-lg font-bold tabular-nums text-[#7c2d2d]">
+                  {time}
+                </time>
                 <div>
                   <p className="font-semibold">{item}</p>
-                  {note ? <p className="mt-1 text-sm leading-6 text-stone-600">{note}</p> : null}
+                  {note ? (
+                    <p className="mt-1 text-sm leading-6 text-stone-600">
+                      {note}
+                    </p>
+                  ) : null}
                 </div>
               </div>
             ))}
@@ -119,7 +161,9 @@ export default function Home() {
               </div>
               <div>
                 <dt className="font-semibold">鍛冶町の一部</dt>
-                <dd className="text-stone-600">12:30〜13:50（行列通過まで）</dd>
+                <dd className="text-stone-600">
+                  12:30〜13:50（行列通過まで）
+                </dd>
               </div>
             </dl>
           </article>
@@ -133,8 +177,12 @@ export default function Home() {
         </section>
 
         <section className="rounded-[1.25rem] bg-[#7c2d2d] p-6 text-white sm:p-8">
-          <p className="text-sm font-semibold tracking-[0.14em] text-red-100">FOR PARTICIPANTS</p>
-          <h2 className="mt-2 text-2xl font-bold">着付け・リハーサル・集合時間を確認</h2>
+          <p className="text-sm font-semibold tracking-[0.14em] text-red-100">
+            FOR PARTICIPANTS
+          </p>
+          <h2 className="mt-2 text-2xl font-bold">
+            着付け・リハーサル・集合時間を確認
+          </h2>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-red-50">
             役柄ごとに、参加する着付け講習会、リハーサル、本番当日の集合時刻を整理しています。
           </p>
