@@ -26,11 +26,7 @@ const rehearsal = [
 
 const festivalDay = [
   ["9:00", "淀君・侍女・若年寄・長刀隊", "支度をしてから食事"],
-  [
-    "9:30",
-    "鉄砲隊・御所車引手・大指物・若年寄・法螺貝",
-    "支度をしてから食事",
-  ],
+  ["9:30", "鉄砲隊・御所車引手・大指物・若年寄・法螺貝", "支度をしてから食事"],
   ["10:00", "大将・当世具足・子供武者", "支度をする前に食事"],
 ];
 
@@ -187,9 +183,7 @@ export default function PreparationPage() {
           <article className="section-card p-5 sm:p-6">
             <h2 className="text-xl font-bold">衣装・隊形</h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-stone-600">
-              <li>
-                行列係は、甲冑のほか小物（毛槍、旗など）も身につけます。
-              </li>
+              <li>行列係は、甲冑のほか小物（毛槍、旗など）も身につけます。</li>
               <li>衣装・行列係で入場隊形を作ります。</li>
               <li>リハーサル時に、自分の席を確認してください。</li>
             </ul>
