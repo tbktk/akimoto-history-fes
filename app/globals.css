@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f3ea;
+  --foreground: #1d1a17;
+  --paper: #fffdf8;
+  --ink-soft: #6b6258;
+  --line: #d8cebf;
+  --accent: #7c2d2d;
+  --accent-dark: #4f1d1d;
+  --gold: #a67c35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family:
+    "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui,
+    sans-serif;
+  background:
+    radial-gradient(circle at top left, rgb(166 124 53 / 8%), transparent 32rem),
+    var(--background);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgb(124 45 45 / 18%);
+}
+
+.page-shell {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.section-card {
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: rgb(255 253 248 / 92%);
+  box-shadow: 0 0.9rem 2.2rem rgb(74 58 37 / 7%);
+}
+
+.kamon-line {
+  position: relative;
+}
+
+.kamon-line::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2.5rem;
+  height: 1px;
+  content: "";
+  background: var(--gold);
+}
+
+.schedule-row + .schedule-row {
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 1.25rem, 72rem);
+  }
+}
